@@ -2,26 +2,27 @@
 using namespace std;
 
 class Abdul_Karim_Lab03{
+public:
 
-private:
-    int size =10;
+    int size =20;
     int *stack_int ; 
     int top;
     char *stack_char;
     // Defining just for char type stack 
     int capacity;
 
-public:
+
     // Defining the Constructors
     Abdul_Karim_Lab03(string type){
         if(type=="int" ){
              stack_int = new int[size];
         }
-        if(type == "char"){
+        else if(type == "char"){
             stack_char = new char[size];
         }
         top = -1;
     }
+    // For Char
     Abdul_Karim_Lab03(string type , int capacity ){
         stack_char = new char[capacity];
         this->capacity = capacity;
@@ -53,7 +54,6 @@ public:
             return ;
         }
         top--;
-        cout<<"Succesfully poped the element\n"<<endl;
     }
     // To display the stack
     void display(){
@@ -87,7 +87,16 @@ public:
         }
         top++;
         stack_char[top] =i; 
+    }
 
+    void pop_char(){
+        if(top==1){
+            cout<<"Stack is empty: ";
+            return;
+        }
+        else{
+            top--;
+        }
     }
     // Displaying the stack
     void display_char(){
@@ -119,6 +128,17 @@ public:
             }
         }
         return check ;
+    }
+    // Function for question 5 reversing the stack;
+    Abdul_Karim_Lab03 reverse(){
+        Abdul_Karim_Lab03 reverse_fibo("int");
+        int end_loop = top;
+        for(int i = 0 ; i<=end_loop;i++){
+            int temp = stack_int[top];
+            pop();
+            reverse_fibo.push(temp);
+        }
+        reverse_fibo.display();
     }
     // Deallocating teh memory 
     ~Abdul_Karim_Lab03(){
