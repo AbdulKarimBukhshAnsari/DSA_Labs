@@ -17,6 +17,6 @@ int main(){
         first = temp;
     
     }
-    fibo.reverse();
-    
+    // reversing the fibonacci series 
+    fibo.reverse(); 
 }

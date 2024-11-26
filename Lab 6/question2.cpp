@@ -88,24 +88,24 @@ int main() {
         cin >> choice;
 
         switch(choice) {
-            case 1: // Enqueue
+            case 1: 
                 cout << "Enter the element to enqueue: ";
                 cin >> element;
                 q.enqueue(element);
                 break;
             
-            case 2: // Dequeue
+            case 2:
                 element = q.dequeue();
                 if (element != -1)
                     cout << "Dequeued element: " << element << endl;
                 break;
 
-            case 3: // Display
+            case 3: 
                 cout << "Queue contents: ";
                 q.display();
                 break;
 
-            case 4: // Get 
+            case 4: 
                 cout << "Current queue size: " << q.size_queue() << endl;
                 break;
 

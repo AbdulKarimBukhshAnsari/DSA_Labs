@@ -17,7 +17,7 @@ int main(){
     }
     while (true){
         int choice;
-        cout<<"Enter which operation you want to perform.\n1)Size of the stack.\n2)Pop the Element.\n3)Display the element of the array.\n4)Enter whether the stack is empty or not.\n6Write the peek element.\n5)End the operation\n"<<endl;
+        cout<<"Enter which operation you want to perform.\n1)Size of the stack.\n2)Pop the Element.\n3)Display the element of the array.\n4)Enter whether the stack is empty or not.\n5)Write the peek element.\n6))End the operation\n"<<endl;
         cin>>choice;
         switch (choice)
         {

@@ -1,7 +1,7 @@
 #include<iostream>
-using namespace std;
+#include"Abdul_Karim_Lab4.cpp"
 
-void bubble_sort_custom(int arr[6],int n){
+int modified_bubble_sort(int arr[30],int n){
     bool check = false;
     // The last will be sorted automatically if the all reaining wil be sorted so we will try to do 1 less comparison
     for(int i = 0 ; i<n-1;i++){
@@ -12,17 +12,23 @@ void bubble_sort_custom(int arr[6],int n){
                 check = true;
             }               
         }
-        if(check == false) break;
-        else check = false;
+        if(check == false) return 1;
     }
-    return ;
+    return 0 ;
 }
 
 int main(){
-    int arr[6] = {1,0,78,45,9,1};
-    int size = sizeof(arr)/sizeof(arr[0]);
-    bubble_sort_custom(arr,size);
-    for(int i = 0 ; i<6;i++){
-        cout<<arr[i]<<" ";
+    int size,arr[30];
+    cout<<"Enter the size of the array: ";
+    cin>>size;
+    cout<<"Enter the Elements: ";
+    for(int i = 0; i<size;i++){
+        cin>>arr[i];
     }
+    int res = modified_bubble_sort(arr,size);
+    if(res==1)
+    cout<<"The Array is already sorted."<<endl;
+    else 
+    cout<<"The array has been sorted";
+    return 0;
 }
